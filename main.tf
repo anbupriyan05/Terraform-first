@@ -16,7 +16,7 @@ module "security-group" {
 module "jenkins" {
   source                    = "./jenkins"
   ami_id                    = var.ec2_ami_id
-  instance_type             = "t2.micro"
+  instance_type             = "t3.micro"
   tag_name                  = "Jenkins:Ubuntu Linux EC2"
   public_key                = var.public_key
   subnet_id                 = tolist(module.networking.dev_proj_1_public_subnets)[0]
