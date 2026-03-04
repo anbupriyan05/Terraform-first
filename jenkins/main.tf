@@ -25,7 +25,7 @@ resource "aws_instance" "jenkins_ec2_instance_ip" {
   tags = {
     Name = var.tag_name
   }
-  key_name                    = "practice-terraform"
+  key_name                    = "practice-1"
   subnet_id                   = var.subnet_id
   vpc_security_group_ids      = var.sg_for_jenkins
   associate_public_ip_address = var.enable_public_ip_address
@@ -39,6 +39,6 @@ resource "aws_instance" "jenkins_ec2_instance_ip" {
 }
 
 resource "aws_key_pair" "jenkins_ec2_instance_public_key" {
-  key_name   = "practice-terra"
+  key_name   = "practice-1"
   public_key = var.public_key
 }
